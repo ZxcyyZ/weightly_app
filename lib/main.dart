@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:weightly_app/Runtime/main_providers.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:weightly_app/UI/Views/Main_Page_View/main_page.dart';
 
 void main() {
-  runApp(
-    const MainProviders(
-      mainWidget: WeightlyAppMaterial()
-    )
+  runApp( const WeightlyAppMaterial()
+    // const MainProviders(
+    //   mainWidget: WeightlyAppMaterial()
   );
 }
 
@@ -36,6 +36,8 @@ class WeightlyAppMaterial extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: MainPage()
     );
   }
