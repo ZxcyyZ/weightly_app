@@ -27,15 +27,7 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Title(
         color: Colors.black, 
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              appTitle,
-            ),
-            Icon(Icons.fitness_center),
-          ],
-        )
+        child: Text(appTitle,),
       ),
       centerTitle: true,
       elevation: 0,
