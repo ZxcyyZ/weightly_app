@@ -1,5 +1,9 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:weightly_app/Runtime/theme_view_model.dart';
+
 abstract class AppColours {
   //page/card primary colours
   Color get primaryPageBackground;
@@ -46,3 +50,9 @@ abstract class AppColours {
   //Constant colours - same across light and dark themes
   Color get textOnAccent;
 }
+
+extension ColourTheme on BuildContext {
+  AppColours get getAppColours => watch<ThemeViewModel>().colours;
+}
+
+

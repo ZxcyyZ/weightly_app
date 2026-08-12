@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weightly_app/Config/app_colours.dart';
 import 'package:weightly_app/UI/Core/Shared_Widgets/main_burger_navigation.dart';
 import 'main_app_bar.dart';
 
@@ -29,7 +30,7 @@ class WeightlyScaffold extends StatelessWidget {
         burgerNav: burgerNavBool ,
       ),
       drawer: WeightlyBurgerNav(),
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: context.getAppColours.primaryPageBackground,
       body: widgetBody,
       // bottomNavigationBar: , -- TO DO, add as param option for main page
     );

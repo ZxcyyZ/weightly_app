@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weightly_app/Config/app_colours.dart';
 import 'package:weightly_app/UI/Core/Shared_Widgets/main_burger_navigation.dart';
 
 class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -7,6 +8,7 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
   final IconData navigationIcon;
   final List<Widget>? actionlist;
   final bool burgerNav;
+  final bool isBottom;
 
 
   const WeightlyAppBar (
@@ -17,6 +19,7 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.navigationCallback,
     this.navigationIcon = Icons.arrow_back,
     this.actionlist,
+    this.isBottom = false,
 
     }
   );
@@ -26,8 +29,14 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Title(
-        color: Colors.black, 
-        child: Text(appTitle,),
+        color: Colors.white,
+        title: "Placeholder",
+        child: Text(
+          style: TextStyle(
+            color: context.getAppColours.primaryText
+          ),
+          appTitle,
+        ),
       ),
       centerTitle: true,
       elevation: 0,
@@ -39,25 +48,23 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
        <Widget>[
         IconButton(
           onPressed: () => {}, 
-          icon: Icon(Icons.settings))
+          icon: Icon(
+            Icons.settings,
+          )
+        )
       ], 
-      bottom: PreferredSize(
+      bottom: isBottom ? PreferredSize(
         preferredSize: preferredSize, 
         child: Container(
           decoration: BoxDecoration(
-            gradient:  LinearGradient(
-              colors: [
-              Colors.black,
-              Colors.black12,
-              Colors.black26,
-              Colors.grey.shade100
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-          )
+            color: context.getAppColours.borderColour
           ),
-          height: 2.0,
+          height: 1.0,
         )
+      ) : null,
+      backgroundColor: context.getAppColours.primaryPageBackground,
+      iconTheme: IconThemeData(
+        color: context.getAppColours.textOnAccent
       ),
 
     );
