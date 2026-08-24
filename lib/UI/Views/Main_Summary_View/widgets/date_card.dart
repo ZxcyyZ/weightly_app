@@ -31,7 +31,7 @@ class _DateCardWidget extends State<DateCardWidget> {
         children:
             widget.dateTimeRange.map((date) {
               return Expanded(
-                child: Container(
+                child: Container( //Wrap inside of a gesture detector
                   width: 65,
                   margin: const EdgeInsets.only(left: 5,right: 5, top: 5),
                   decoration: BoxDecoration(
