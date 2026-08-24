@@ -30,7 +30,7 @@ class WeightlyScaffold extends StatelessWidget {
         burgerNav: burgerNavBool ,
       ),
       drawer: WeightlyBurgerNav(),
-      backgroundColor: context.getAppColours.primaryPageBackground,
+      backgroundColor: context.getAppColours.surfaces.pageBackground,
       body: widgetBody,
       // bottomNavigationBar: , -- TO DO, add as param option for main page
     );

@@ -28,15 +28,15 @@ class MainSummaryPage extends StatelessWidget {
       width: 500,
       height: 150,
       decoration: BoxDecoration(
-        color: context.getAppColours.primaryCardBackground,
+        color: context.getAppColours.surfaces.cardBackground,
         border: Border(
           top: BorderSide(
             width: 2.0,
-            color: context.getAppColours.borderColour
+            color: context.getAppColours.borders.standard
           ),
           bottom: BorderSide(
             width: 2.0,
-            color: context.getAppColours.borderColour
+            color: context.getAppColours.borders.standard
           ),
         )
       ),

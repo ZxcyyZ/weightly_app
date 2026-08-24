@@ -33,7 +33,7 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
         title: "Placeholder",
         child: Text(
           style: TextStyle(
-            color: context.getAppColours.primaryText
+            color: context.getAppColours.text.primary
           ),
           appTitle,
         ),
@@ -57,12 +57,12 @@ class WeightlyAppBar extends StatelessWidget implements PreferredSizeWidget {
         preferredSize: preferredSize, 
         child: Container(
           decoration: BoxDecoration(
-            color: context.getAppColours.borderColour
+            color: context.getAppColours.borders.standard
           ),
           height: 1.0,
         )
       ) : null,
-      backgroundColor: context.getAppColours.primaryPageBackground,
+      backgroundColor: context.getAppColours.surfaces.pageBackground,
       iconTheme: IconThemeData(
         color: context.getAppColours.textOnAccent
       ),
