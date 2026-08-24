@@ -21,7 +21,7 @@ class WeightlyAppMaterial extends StatelessWidget {
       onGenerateRoute: AppRouting.generateBurgerNavigation,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      initialRoute: '/MainSummaryPage',
+      initialRoute: '/',
     );
   }
 }

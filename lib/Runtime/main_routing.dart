@@ -6,17 +6,17 @@ import 'package:weightly_app/UI/Views/Main_Summary_View/view_models/weightly_sum
 class AppRouting {
   static Route<dynamic> generateBurgerNavigation(RouteSettings pageName) {
     switch(pageName.name){
-      case '/MainSummaryPage':
+      case '/':
         return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider<WeightlySummaryViewModel>(
-            create: (context) => WeightlySummaryViewModel(),
+            create: (context) => WeightlySummaryViewModel()..setDateRange(),
             child: MainSummaryPage()
         ),
       );
       default:
         return MaterialPageRoute(
           builder: (context) => ChangeNotifierProvider<WeightlySummaryViewModel>(
-            create: (context) => WeightlySummaryViewModel(),
+            create: (context) => WeightlySummaryViewModel()..setDateRange(),
             child: MainSummaryPage()
         ),
       );
